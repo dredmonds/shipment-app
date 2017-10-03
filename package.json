@@ -1,0 +1,19 @@
+{
+  "name": "shipment-app",
+  "version": "0.0.1",
+  "description": "AJW Shipment Status Information Application",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dredmonds/shipment-app.git"
+  },
+  "author": "E De Los Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dredmonds/shipment-app/issues"
+  },
+  "homepage": "https://github.com/dredmonds/shipment-app#readme"
+}
