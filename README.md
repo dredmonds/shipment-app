@@ -2,7 +2,7 @@
 **AJW Shipment Dashboard**
 
 Overview:
-  This application build in Ionic Framework which suitable run on different
+  This application build from Ionic Framework which suitable run on different
   mobile flatform(e.g. Android, IOS etc.) and standard web browser.
 
 Setup
