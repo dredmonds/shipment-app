@@ -1,0 +1,84 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-assertive">
+    <h1 class="title">Shipment Details</h1>
+  </ion-header-bar>
+
+  <ion-content class="has-header custom-modal">
+    <div class="padding">
+      <div class="list">
+
+        <div class="item item-divider">Ship-From
+          <label class="item item-input borderless" ng-if="shipment.from_addr1">
+            <span class="input-label">Address Line 1</span>{{shipment.from_addr1}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.from_addr2">
+            <span class="input-label">Address Line 2</span>{{shipment.from_addr2}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.from_city">
+            <span class="input-label">City</span>{{shipment.from_city}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.from_state">
+            <span class="input-label">State</span>{{shipment.from_state}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.from_zip">
+            <span class="input-label">Post/Zip Code</span>{{shipment.from_zip}}
+          </label>
+        </div>
+
+        <div class="item item-divider">Shipment Name/Number
+          <label class="item item-input borderless">
+  					<span class="input-label">Shipment No</span>{{shipment.sm_number}}
+  				</label>
+          <label class="item item-input borderless" ng-if="shipment.airway_bill">
+            <span class="input-label">Air-way Bill</span>{{shipment.airway_bill}}
+          </label>
+          <label class="item item-input borderless">
+            <span class="input-label">Certificate No</span>{{shipment.cert_number}}
+          </label>
+        </div>
+
+        <div class="item item-divider">Ship-To
+          <label class="item item-input borderless" ng-if="shipment.attention">
+            <span class="input-label">Attention</span>{{shipment.attention}}  {{shipment.email_address}}  {{shipment.phone_number}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.ship_name">
+            <span class="input-label">Company Name</span>{{shipment.ship_name}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.ship_address1">
+            <span class="input-label">Address Line 1</span>{{shipment.ship_address1}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.ship_address2">
+            <span class="input-label">Address Line 2</span>{{shipment.ship_address2}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.ship_address3">
+            <span class="input-label">Address Line 3</span>{{shipment.ship_address3}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.ship_address4">
+            <span class="input-label">County/City</span>{{shipment.ship_address4}}
+          </label>
+          <label class="item item-input borderless" ng-if="shipment.ship_address5">
+            <span class="input-label">Country</span>{{shipment.ship_address5}}
+          </label>
+        </div>
+
+        <div class="item item-divider">Shipment Notes
+          <textarea class="item item-input borderless" ng-if="shipment.notes" cols="80" rows="7">
+            {{shipment.notes}}
+          </textarea>
+        </div>
+        <div class="item item-divider">Shipment Status
+          <label class="item item-input borderless"> In Packing
+          </label>
+        </div>
+
+
+      </div>
+    </div>
+  </ion-content>
+
+  <ion-footer-bar>
+      <div class="row">
+        <a class="button button-dark col-20" align="center" ng-click="closeShipmentViewModal()">Cancel</a>
+      </div>
+  </ion-footer-bar>
+</ion-modal-view>

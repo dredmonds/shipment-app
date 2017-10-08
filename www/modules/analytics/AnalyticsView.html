@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="padding">
+
+      <div class="bodyDiv">
+        <h3 class="title">Shipment Analytics</h3>
+        <div class="item item-assertive" ng-show="showDateError">
+          Please select a date in the future
+        </div>
+        <div class="item item-stable row">
+          <div class="col-40 padding"></div>
+          <div class="col-20 padding">Date Range:</div>
+          <div class="col-20 padding item item-light" ion-datetime-picker date ng-model="vm.dateRange.start"  ng-change="dateChange()">
+              {{vm.dateRange.start| date: "MMM dd, yyyy"}}
+          </div>
+          <div class="col-20 item item-light padding" ion-datetime-picker date ng-model="vm.dateRange.end"  ng-change="dateChange()">
+              {{vm.dateRange.end| date: "MMM dd, yyyy"}}
+          </div>
+        </div>
+        <br><br>
+
+        <!--Div that will hold the global map chart-->
+        <div id="geoGlobalView_div" style="width: 900px; height: 500px;"></div>
+
+      </div>
+
+      <div class="row" ng-repeat="country in countryData" ng-class-even="'even'">
+        <div class="row">
+          <div class="col">{{country[0]}}</div>
+          <div class="col">{{country[1]}}</div>
+        </div>
+      </div>
+
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="padding">
+
+      <div class="list dataList">
+        <h3 class="title">Currently Being Packed<span class="pull-right">{{ shipmentData.length }}</span> </h3>
+        <hr>
+        <form>
+          <label class="item item-input item-divider">
+            <span class="input-label">Search shipment:</span>
+            <input type="search" placeholder="Search here.." ng-model="search.query" />
+          </label>
+        </form>
+        <br>
+
+        <div class="list">
+          <div class="item item-divider">
+            <div class="row">
+              <div class="col-20" ng-click="orderField = 'sm_number';orderDirection = !orderDirection;">Shipment No
+                <i ng-if="orderField == 'sm_number';" ng-class="orderDirection ? 'ion-ios-arrow-thin-up':'ion-ios-arrow-thin-down'"></i>
+              </div>
+              <div class="col-30" ng-click="orderField = 'ship_name';orderDirection = !orderDirection;">Ship-Name
+                <i ng-if="orderField == 'ship_name';" ng-class="orderDirection ? 'ion-ios-arrow-thin-up':'ion-ios-arrow-thin-down'"></i>
+              </div>
+              <div class="col-20" ng-click="orderField = 'ship_address5';orderDirection = !orderDirection;">Ship-To-Location
+                <i ng-if="orderField == 'ship_address5';" ng-class="orderDirection ? 'ion-ios-arrow-thin-up':'ion-ios-arrow-thin-down'"></i>
+              </div>
+              <div class="col-20" ng-click="orderField = 'ship_date';orderDirection = !orderDirection;">Ship-Date
+                <i ng-if="orderField == 'ship_date';" ng-class="orderDirection ? 'ion-ios-arrow-thin-up':'ion-ios-arrow-thin-down'"></i>
+              </div>
+              <div class="col-10" ng-click="orderField = 'ship_timestamp';orderDirection = !orderDirection;">Ship-ETA
+                <i ng-if="orderField == 'ship_timestamp';" ng-class="orderDirection ? 'ion-ios-arrow-thin-up':'ion-ios-arrow-thin-down'"></i>
+              </div>
+            </div>
+          </div>
+          <div class="item item-text-wrap" collection-repeat="ship in shipmentData | filter:search.query | orderBy:orderField:orderDirection" ng-click="openShipmentViewModal(ship);">
+            <div class="row">
+              <div class="col-20">{{ship.sm_number}}</div>
+              <div class="col-30">{{ship.ship_name}}</div>
+              <div class="col-20">{{ship.ship_address5}}</div>
+              <div class="col-20">{{ship.ship_date | date:'yyyy-MM-dd'}}</div>
+              <div class="col-10">{{ship.eta_date_time | date:'yyyy-MM-dd'}}</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+</ion-content>

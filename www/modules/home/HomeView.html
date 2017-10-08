@@ -1,0 +1,39 @@
+<ion-content>
+  <div class="padding">
+
+      <div align="center">
+        <img  ng-src="https://www.ajw-group.com/furniture/logo.png" />
+        <br>
+      </div>
+
+      <div class="bodyDiv">
+        <box class="button" href="" ui-sref="dashboard.shipment">
+          <span>Currently being packed</span>
+          <h2>{{shipmentData.length}}</h2>
+        </box>
+        <box class="button">
+          <span>Planned to be packed</span>
+          <h2>{{shipmentInProgress.length}}</h2>
+        </box>
+        <box class="button" href="" ui-sref="dashboard.shipment">
+          <span>Shipment count</span>
+          <h2>{{shipmentData.length}}</h2>
+        </box>
+      </div>
+      <br>
+
+      <div class="bodyDiv">
+        <h3 class="title">Global Shipment</h3>
+        <div class="item item-assertive" ng-show="showDateError">
+          Please select a date in the future
+        </div>
+        <br><br>
+
+        <!--Div that will hold the global map chart-->
+        <div id="geoGlobalMap_div" style="width: 900px; height: 500px;"></div>
+
+      </div>
+
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+</ion-content>
