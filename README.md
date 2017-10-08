@@ -3,7 +3,7 @@
 
 Overview:
   This application build from Ionic Framework which suitable run on different
-  mobile flatform(e.g. Android, IOS etc.) and standard web browser.
+  mobile/tablet flatform(e.g. Android, IOS etc.) or standard web browser.
 
 Setup
  - Assumed NodeJS has been installed into your system
