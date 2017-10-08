@@ -1,19 +1,22 @@
 {
-  "name": "shipment-app",
-  "version": "0.0.1",
-  "description": "AJW Shipment Status Information Application",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "shipment",
+  "version": "1.1.1",
+  "description": "shipment: An Ionic project",
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^3.1.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dredmonds/shipment-app.git"
-  },
-  "author": "E De Los Reyes",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dredmonds/shipment-app/issues"
-  },
-  "homepage": "https://github.com/dredmonds/shipment-app#readme"
+  "cordovaPlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [],
+  "dependencies": {
+  }
 }
